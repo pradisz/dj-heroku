@@ -16,12 +16,9 @@ What things you need to install and how to install them.
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
----
-
 1. **[Git](https://git-scm.com/downloads)**
-```
+
 Distributed version-control system for tracking changes in source code during software development.
-```
 
 2.  **[Python 3](https://www.python.org/downloads/)**
 ```
@@ -41,7 +38,7 @@ After it finished, run:
 brew services start postgresql
 
 # WINDOWS
-PostgreSQL 12.3 for Windows x86-64 - http://www.enterprisedb.com/thank-you-downloading-postgresql?cid=48
+http://www.enterprisedb.com/thank-you-downloading-postgresql?cid=48
 
 Setting Windows PATH for Postgres tools:
 https://sqlbackupandftp.com/blog/setting-windows-path-for-postgres-tools
@@ -105,12 +102,12 @@ ALTER USER kardus WITH ENCRYPTED PASSWORD USER_POSTGRES_PASSWORD;
 python manage.py migrate
 ```
 
-1. Create Superuser
+6. Create Superuser
 ```
 python manage.py createsuperuser
 ```
 
-6. Run web locally
+7. Run web locally
 ```
 python manage.py runserver
 ```
@@ -142,7 +139,7 @@ git add .
 git commit -m 'Ready to deploy heroku'
 ```
 
-8. Setup Heroku app
+5. Setup Heroku app
 ```
 # Login to your heroku account
 
@@ -157,13 +154,13 @@ heroku create APP_NAME
 heroku addons:create heroku-postgresql:hobby-dev
 ```
 
-9. Add secret_key to heroku apps
+6. Add secret_key to heroku apps
 
 ```
 # Copy SECRET_KEY in settings.py to Heroku app settings.
 ```
 
-10. Deploy
+7. Deploy
 ```
 # Push to master
 git push heroku master
